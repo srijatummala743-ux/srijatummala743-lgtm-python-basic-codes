@@ -1,0 +1,24 @@
+import numpy as np
+
+# initial positions
+particles = np.array([[0.0, 0.0],
+                      [1.0, 0.0],
+                      [0.5, 0.8]])
+
+def update_positions(particles, strength=0.1):
+    new_positions = particles.copy()
+    for i in range(len(particles)):
+        force = np.zeros(2)
+        for j in range(len(particles)):
+            if i != j:
+                direction = particles[i] - particles[j]
+                distance = np.linalg.norm(direction)
+                if distance > 0:
+                    force += strength * direction / (distance**2)
+        new_positions[i] += force
+    return new_positions
+
+# update for 5 steps
+for step in range(5):
+    particles = update_positions(particles)
+    print(f"Step {step+1}:\n{particles}\n")
