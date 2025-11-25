@@ -1,0 +1,26 @@
+count = 0
+
+while count < 5:
+    print("Count:", count)
+    count += 1
+for i in range(5):
+    print("Number:", i)
+fruits = ["apple", "banana", "orange"]
+
+for fruit in fruits:
+    print(fruit)
+names = ["Ali", "Sara", "John"]
+
+for index, name in enumerate(names):
+    print(index, name)
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+while True:
+    text = input("Type 'exit' to stop: ")
+    if text == "exit":
+        break
+for i in range(10):
+    if i % 2 == 0:
+        continue  # skip even numbers
+    print(i)
