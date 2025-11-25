@@ -1,0 +1,43 @@
+i = 1
+
+while i <= 5:
+    print(i)
+    i = i + 1  # or i += 1
+word = ""
+
+while word != "stop":
+    word = input("Enter something (type stop to exit): ")
+while True:
+    print("This will run forever!")
+n = int(input("Enter a number: "))
+i = 1
+total = 0
+
+while i <= n:
+    total += i
+    i += 1
+
+print("Sum =", total)
+i = 10
+
+while i >= 1:
+    print(i)
+    i -= 1
+
+print("Blast Off 🚀")
+n = int(input("Enter a number: "))
+fact = 1
+
+while n > 0:
+    fact *= n
+    n -= 1
+
+print("Factorial =", fact)
+num = int(input("Enter a number: "))
+total = 0
+
+while num > 0:
+    total += num % 10
+    num //= 10
+
+print("Sum of digits:", total)
